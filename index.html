@@ -92,7 +92,9 @@ section{padding:96px 0}
 .lb .x{top:20px;right:20px}.lb .pv{left:16px;top:50%}.lb .nx{right:16px;top:50%}
 
 .free{display:grid;grid-template-columns:auto 1fr auto;gap:32px;align-items:center;background:#fff;border:2px solid var(--acc);border-radius:28px;padding:44px;box-shadow:0 14px 40px rgba(255,106,43,.14)}
-.free-ic{font-size:56px}
+.free-ic{width:76px;height:76px;border-radius:20px;background:rgba(255,106,43,.12);color:var(--acc);display:grid;place-items:center}
+.free-ic svg{width:40px;height:40px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.pin{width:1.1em;height:1.1em;fill:none;stroke:currentColor;stroke-width:2;vertical-align:-.15em;margin-right:4px}
 
 .contact{background:linear-gradient(135deg,#fff3ea,#f4f1ec);border:1px solid var(--line);border-radius:28px;padding:56px;display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center}
 .contact h2{font-size:clamp(26px,3.4vw,40px);margin-bottom:16px}
@@ -122,6 +124,21 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
  .free{grid-template-columns:1fr;padding:28px}
  .gal{columns:2}.contact{padding:32px}section{padding:70px 0}
 }
+@media(max-width:560px){
+ .hero{align-items:flex-start;padding:84px 0 96px;min-height:100svh}
+ .hero::before{inset:auto 0 0 0;height:58%;background-position:58% center}
+ .hero::after{background:linear-gradient(180deg,rgba(255,255,255,1) 0%,rgba(255,255,255,1) 41%,rgba(255,255,255,0) 68%)}
+ .hero-in{display:flex;flex-direction:column;min-height:calc(100svh - 180px);padding-right:4px}
+ .tag{font-size:13px!important;padding:8px 14px;margin-bottom:16px;align-self:flex-start}
+ .hero h1{font-size:clamp(28px,8.4vw,40px);margin-bottom:12px}
+ .hero-in p{font-size:13px;line-height:1.5;margin-bottom:18px;letter-spacing:.01em}
+ .hero-in .cta{flex-wrap:nowrap;gap:8px}
+ .hero-in .cta .btn{width:auto;flex:1;padding:13px 8px;font-size:13px;gap:6px}
+ .hero-in .cta .btn svg{width:17px;height:17px}
+ .hero-in .stats{margin-top:auto;flex-wrap:nowrap;justify-content:space-between;gap:8px;background:rgba(255,255,255,.9);border-radius:16px;padding:12px 14px;box-shadow:0 6px 20px rgba(40,30,20,.12)}
+ .hero-in .stats b{font-size:22px}
+ .hero-in .stats span{font-size:9.5px;display:block;line-height:1.25}
+}
 @media(max-width:560px){.grid{grid-template-columns:1fr}.gal{columns:1}.stats{gap:28px}.badge{right:8px}.btn{width:100%;justify-content:center}}
 </style>
 </head>
@@ -141,7 +158,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 <main id="top">
 <div class="hero">
  <div class="wrap"><div class="hero-in">
-  <div class="tag">📍 Рудный и Костанайская область</div>
+  <div class="tag"><svg class="pin" viewBox="0 0 24 24"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg> Рудный и Костанайская область</div>
   <h1>Кровельные и фасадные работы <em>любой сложности</em></h1>
   <p>Надёжная крыша, аккуратный фасад и всё, что к ним относится — от водосточной системы до уютной беседки. Опыт более 15 лет.</p>
   <div class="cta">
@@ -188,7 +205,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 
 <section id="free"><div class="wrap">
  <div class="free rv">
-  <div class="free-ic">🎁</div>
+  <div class="free-ic"><svg viewBox="0 0 24 24"><path d="M3 17 17 3l4 4L7 21z"/><path d="m7 13 2 2M10 10l2 2M13 7l2 2"/></svg></div>
   <div>
    <h2 class="sec-h" style="margin-bottom:10px">Выезд на замеры и консультация — бесплатно</h2>
    <p style="color:var(--mut);font-size:18px">Приедем, оценим объём работ, подберём материалы и назовём точную стоимость. Без обязательств.</p>
@@ -202,7 +219,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
   <div>
    <h2>Нужна крыша или фасад? Рассчитаем стоимость бесплатно</h2>
    <p>Напишите нам в WhatsApp или позвоните — ответим быстро и подскажем лучшее решение для вашего дома.</p>
-   <p style="margin-top:18px;font-size:16px">📍 г. Рудный и Костанайская область</p>
+   <p style="margin-top:18px;font-size:16px"><svg class="pin" viewBox="0 0 24 24"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg> г. Рудный и Костанайская область</p>
   </div>
   <div class="clist">
    <a href="https://wa.me/77783351326?text=Здравствуйте!%20Интересуют%20ваши%20услуги" target="_blank" rel="noopener"><span class="ci" style="background:rgba(37,211,102,.15);color:var(--wa)"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .2-3.3-.7-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.3.5-.4.4c-.1.2-.3.3-.1.6.2.3.7 1.2 1.5 1.9 1 .9 1.9 1.2 2.2 1.3.3.1.4.1.6-.1l.8-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.1.1.6-.1 1.2z"/></svg></span><span><small>WhatsApp</small>+7 778 335 13 26</span></a>
