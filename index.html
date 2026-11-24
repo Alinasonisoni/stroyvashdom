@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>СтройВашДом — кровельные и фасадные работы в Рудном</title>
+<meta name="description" content="СтройВашДом: кровля, фасады, беседки, веранды, работа с деревом, водосточные системы и услуги жестянщика. Рудный и Костанайская область. Опыт более 15 лет.">
+<link rel="icon" href="img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Unbounded:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#ffffff;--bg2:#f4f1ec;--card:#ffffff;--line:#e5e0d8;--tx:#1b1d22;--mut:#5f6672;--acc:#ff6a2b;--acc2:#ff8f5c;--wa:#25d366}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font-family:Manrope,system-ui,sans-serif;background:var(--bg);color:var(--tx);line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:none;margin:0 auto;padding:0 clamp(20px,5vw,70px)}
+h1,h2,h3{font-family:Unbounded,sans-serif;line-height:1.15;font-weight:700}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 26px;border-radius:12px;font-weight:700;font-size:16px;border:0;cursor:pointer;transition:.25s}
+.btn-acc{background:var(--acc);color:#fff}.btn-acc:hover{background:var(--acc2);transform:translateY(-2px)}
+.btn-wa{background:var(--wa);color:#06260f}.btn-wa:hover{transform:translateY(-2px);filter:brightness(1.08)}
+.btn-line{border:1.5px solid rgba(27,29,34,.3);color:var(--tx);background:rgba(255,255,255,.7)}.btn-line:hover{border-color:var(--acc);color:var(--acc)}
+svg.i{width:20px;height:20px;fill:currentColor;flex:none}
+
+header{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(255,255,255,.85);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo{display:flex;align-items:center;gap:12px;font-family:Unbounded;font-weight:700;font-size:17px}
+.logo img{width:42px;height:42px;border-radius:50%}
+.logo span{color:var(--acc)}
+nav ul{display:flex;gap:28px;list-style:none;font-weight:600;font-size:15px;color:var(--mut)}
+nav a:hover{color:var(--tx)}
+.tel{font-weight:700;display:flex;align-items:center;gap:8px}
+.burger{display:none;background:none;border:0;color:var(--tx);font-size:28px;cursor:pointer}
+
+.hero{position:relative;min-height:min(100vh,860px);display:flex;align-items:center;padding:104px 0 56px;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:url(img/p26.webp) center/cover;filter:brightness(1.05) saturate(1.05)}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,.9) 0%,rgba(255,255,255,.62) 32%,rgba(255,255,255,0) 62%),linear-gradient(0deg,var(--bg),transparent 18%)}
+.hero .wrap{position:relative;z-index:2;width:100%;max-width:none;padding-left:clamp(20px,5vw,70px)}
+.hero-in{margin-right:auto;max-width:1000px;text-align:left;text-transform:uppercase}
+.hero-in .cta,.hero-in .stats{justify-content:flex-start}
+.hero-in p{letter-spacing:.02em;font-weight:600;max-width:760px}
+.tag{display:inline-flex;gap:8px;align-items:center;padding:10px 18px;font-size:16px!important;border:1px solid rgba(255,106,43,.5);border-radius:99px;color:#d4500f;font-weight:600;background:rgba(255,106,43,.1);margin-bottom:24px}
+.hero h1{font-size:clamp(32px,5.6vw,74px);margin-bottom:22px}
+.hero h1 em{font-style:normal;color:var(--acc);display:block;font-size:.5em;letter-spacing:.04em;margin-top:.35em}
+.hero p{font-size:clamp(19px,2.2vw,24px);color:#3b414b;margin-bottom:30px}
+.cta{display:flex;flex-wrap:wrap;gap:14px}
+.stats{display:flex;flex-wrap:wrap;gap:44px;margin-top:36px}
+.stats b{display:block;font-family:Unbounded;font-size:40px;color:var(--acc)}
+.stats span{color:var(--mut);font-size:15px}
+
+section{padding:96px 0}
+.eyebrow{color:var(--acc);font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:13px;margin-bottom:14px}
+.sec-h{font-size:clamp(28px,3.8vw,44px);margin-bottom:16px}
+.sec-p{color:var(--mut);max-width:900px;font-size:18px;margin-bottom:48px}
+
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:30px;transition:.3s;position:relative;overflow:hidden}
+.card{box-shadow:0 6px 24px rgba(40,30,20,.06)}
+.card:hover{transform:translateY(-6px);border-color:var(--acc);box-shadow:0 14px 34px rgba(255,106,43,.15)}
+.card{padding-top:0}
+.cimg{max-width:none;width:calc(100% + 60px);margin:0 -31px 24px;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:20px 20px 0 0;transition:.5s}
+.card:hover .cimg{transform:scale(1.04)}
+.card .ic{width:54px;height:54px;border-radius:14px;background:rgba(255,106,43,.12);color:var(--acc);display:grid;place-items:center;margin-bottom:20px}
+.card .ic svg{width:28px;height:28px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.card h3{font-size:18px;margin-bottom:10px}
+.card p{color:var(--mut);font-size:15px}
+
+.alt{background:var(--bg2)}
+.about{display:grid;grid-template-columns:1.7fr 1fr;gap:44px;align-items:center}
+.about .pic{position:relative}
+.about .pic img{border-radius:22px;height:auto;width:100%}
+.badge{position:absolute;right:-14px;bottom:-18px;background:var(--acc);padding:18px 24px;border-radius:16px;font-family:Unbounded;font-weight:700;text-align:center;line-height:1.2}
+.badge b{font-size:38px;display:block}.badge small{font-size:12px;font-weight:500;font-family:Manrope}
+.checks{list-style:none;margin:26px 0 32px;display:grid;gap:14px}
+.checks li{display:flex;gap:12px;align-items:flex-start}
+.checks li::before{content:"✓";flex:none;width:24px;height:24px;border-radius:50%;background:var(--acc);color:#fff;display:grid;place-items:center;font-size:13px;font-weight:800;margin-top:2px}
+
+.filters{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:30px}
+.filters button{background:var(--card);color:var(--mut);border:1px solid var(--line);padding:10px 20px;border-radius:99px;font:600 15px Manrope;cursor:pointer;transition:.2s}
+.filters button.on,.filters button:hover{background:var(--acc);border-color:var(--acc);color:#fff}
+.gal{columns:3;column-gap:16px}
+.gal figure{box-shadow:0 8px 26px rgba(40,30,20,.12);will-change:transform;transform:translateY(var(--py,0px));break-inside:avoid;margin-bottom:16px;border-radius:16px;overflow:hidden;cursor:zoom-in;position:relative;background:var(--card)}
+.gal figure img{width:100%;transition:.5s}
+.gal figure:hover img{transform:scale(1.05)}
+.gal figure.hide{display:none}
+.lb{position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:100;display:none;align-items:center;justify-content:center;padding:20px}
+.lb.on{display:flex}
+.lb img{max-height:90vh;max-width:94vw;border-radius:10px}
+.lb button{position:absolute;background:rgba(255,255,255,.12);border:0;color:#fff;width:50px;height:50px;border-radius:50%;font-size:24px;cursor:pointer}
+.lb .x{top:20px;right:20px}.lb .pv{left:16px;top:50%}.lb .nx{right:16px;top:50%}
+
+.free{display:grid;grid-template-columns:auto 1fr auto;gap:32px;align-items:center;background:#fff;border:2px solid var(--acc);border-radius:28px;padding:44px;box-shadow:0 14px 40px rgba(255,106,43,.14)}
+.free-ic{font-size:56px}
+
+.contact{background:linear-gradient(135deg,#fff3ea,#f4f1ec);border:1px solid var(--line);border-radius:28px;padding:56px;display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center}
+.contact h2{font-size:clamp(26px,3.4vw,40px);margin-bottom:16px}
+.contact p{color:var(--mut);font-size:18px}
+.clist{display:grid;gap:14px}
+.clist a{display:flex;align-items:center;gap:16px;background:var(--card);border:1px solid var(--line);padding:18px 22px;border-radius:16px;transition:.25s;font-weight:700}
+.clist a:hover{border-color:var(--acc);transform:translateX(6px)}
+.clist small{display:block;color:var(--mut);font-weight:500;font-size:13px}
+.clist .ci{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;flex:none}
+.clist svg{width:24px;height:24px;fill:currentColor}
+footer{padding:36px 0;border-top:1px solid var(--line);color:var(--mut);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+
+.fab{position:fixed;right:20px;bottom:20px;z-index:60;width:62px;height:62px;border-radius:50%;background:var(--wa);color:#06260f;display:grid;place-items:center;box-shadow:0 8px 28px rgba(37,211,102,.45);animation:pulse 2.4s infinite}
+.fab svg{width:34px;height:34px;fill:currentColor}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.6)}70%{box-shadow:0 0 0 18px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+.rv{opacity:0;transform:translateY(28px);transition:.7s}.rv.in{opacity:1;transform:none}
+
+@media(min-width:1400px){.gal{columns:4}}
+@media(max-width:920px){
+ .hero-in{margin-left:0}
+ .hero::after{background:rgba(255,255,255,.82)}
+ nav{position:fixed;inset:70px 0 auto 0;background:var(--bg);border-bottom:1px solid var(--line);padding:20px;display:none}
+ nav.open{display:block}nav ul{flex-direction:column;gap:18px}
+ .burger{display:block}.tel span{display:none}
+ .grid{grid-template-columns:1fr 1fr}.about,.contact{grid-template-columns:1fr}
+ .free{grid-template-columns:1fr;padding:28px}
+ .gal{columns:2}.contact{padding:32px}section{padding:70px 0}
+}
+@media(max-width:560px){.grid{grid-template-columns:1fr}.gal{columns:1}.stats{gap:28px}.badge{right:8px}.btn{width:100%;justify-content:center}}
+</style>
+</head>
+<body>
+
+<header>
+ <div class="wrap nav">
+  <a href="#top" class="logo"><img src="img/logo.png" alt="Логотип СтройВашДом">Строй<span>Ваш</span>Дом</a>
+  <nav id="nav"><ul>
+   <li><a href="#services">Услуги</a></li><li><a href="#about">О нас</a></li><li><a href="#free">Бесплатный замер</a></li><li><a href="#contacts">Контакты</a></li>
+  </ul></nav>
+  <a class="tel" href="tel:+77783351326"><svg class="i" viewBox="0 0 24 24"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11 11 0 0 0 3.6.6 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.6 3.6a1 1 0 0 1-.25 1z"/></svg><span>+7 778 335 13 26</span></a>
+  <button class="burger" aria-label="Меню" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
+ </div>
+</header>
+
+<main id="top">
+<div class="hero">
+ <div class="wrap"><div class="hero-in">
+  <div class="tag">📍 Рудный и Костанайская область</div>
+  <h1>Кровельные и фасадные работы <em>любой сложности</em></h1>
+  <p>Надёжная крыша, аккуратный фасад и всё, что к ним относится — от водосточной системы до уютной беседки. Опыт более 15 лет.</p>
+  <div class="cta">
+   <a class="btn btn-wa" href="https://wa.me/77783351326?text=Здравствуйте!%20Интересуют%20ваши%20услуги" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .2-3.3-.7-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.3.5-.4.4c-.1.2-.3.3-.1.6.2.3.7 1.2 1.5 1.9 1 .9 1.9 1.2 2.200 1.3.3.1.4.1.6-.1l.8-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.1.1.6-.1 1.2z"/></svg>Написать в WhatsApp</a>
+   <a class="btn btn-line" href="tel:+77783351326">Позвонить</a>
+  </div>
+  <div class="stats">
+   <div><b>15+</b><span>лет опыта</span></div>
+   <div><b>100%</b><span>работаем по договору</span></div>
+   <div><b>6</b><span>направлений работ</span></div>
+  </div>
+ </div></div>
+</div>
+
+<section id="services"><div class="wrap">
+ <div class="eyebrow rv">Услуги</div>
+ <h2 class="sec-h rv">Что мы делаем</h2>
+ <p class="sec-p rv">Полный цикл работ по кровле и фасаду вашего дома — от замера до аккуратной сдачи объекта.</p>
+ <div class="grid">
+  <div class="card rv"><img class="cimg" src="img/p26.webp" alt="Крыши" loading="lazy"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 12 12 4l9 8M5 10v10h14V10"/></svg></div><h3>Крыши</h3><p>Монтаж и ремонт кровли любой сложности: стропильная система, металлочерепица, профлист.</p></div>
+  <div class="card rv"><img class="cimg" src="img/p05c.webp" alt="Фасады" style="object-position:center top" loading="lazy"><div class="ic"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M4 9h16M4 15h16M10 3v6M14 9v6M10 15v6"/></svg></div><h3>Фасады</h3><p>Облицовка фасадов и цоколя сайдингом, металлосайдингом и фасадными панелями под камень и кирпич, и многое другое.</p></div>
+  <div class="card rv"><img class="cimg" src="img/p20.webp" alt="Беседки и веранды" loading="lazy"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V10l7-5 7 5v11M9 21v-6h6v6"/></svg></div><h3>Беседки и веранды</h3><p>Строим беседки, веранды и террасы под ключ — от каркаса до отделки и кровли.</p></div>
+  <div class="card rv"><img class="cimg" src="img/p14.webp" alt="Работа с натуральным деревом" loading="lazy"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 22V9M12 9c-4 0-6-3-6-6 4 0 6 2 6 6zm0 4c4 0 6-3 6-6-4 0-6 2-6 6z"/></svg></div><h3>Работа с натуральным деревом</h3><p>Лестницы, ограждения, настилы, обшивка и обработка древесины защитными составами.</p></div>
+  <div class="card rv"><img class="cimg" src="img/p06.webp" alt="Водосточная система" loading="lazy"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 6h18v4H3zM6 10v6a3 3 0 0 0 3 3h0M19 10v10M16 20h6"/></svg></div><h3>Водосточная система</h3><p>Откосы, водоотливы, уголки и другие элементы — изготовление и установка.</p></div>
+  <div class="card rv"><img class="cimg" src="img/p01c.webp" alt="Услуги жестянщика" loading="lazy"><div class="ic"><svg viewBox="0 0 24 24"><path d="m14 7 3-3 3 3-3 3zM14 7 4 17v3h3l10-10"/></svg></div><h3>Услуги жестянщика</h3><p>Изготовим по вашим размерам: откосы, уголки, колпаки на трубы, отливы, коньки.</p></div>
+ </div>
+</div></section>
+
+<section id="about" class="alt"><div class="wrap about">
+ <div class="pic rv"><img src="img/p25.webp" alt="Крыша дома в процессе монтажа" loading="lazy"><div class="badge"><b>15+</b><small>лет на рынке</small></div></div>
+ <div class="rv">
+  <div class="eyebrow">О компании</div>
+  <h2 class="sec-h">Мы — мастера из Рудного</h2>
+  <p style="color:var(--mut);font-size:18px">Кровлей и фасадами мы занимаемся больше 15 лет. За это время перекрыли немало крыш и обшили немало домов в Рудном и по области. Приезжаем, смотрим дом, честно считаем стоимость и делаем то, о чём договорились.</p>
+  <ul class="checks">
+   <li>Опыт работы более 15 лет</li>
+   <li>Собственное изготовление изделий из металла</li>
+   <li>Работаем в Рудном и по всей Костанайской области</li>
+   <li>Бесплатный выезд на замер и расчёт стоимости</li>
+  </ul>
+  <a class="btn btn-acc" href="#contacts">Получить расчёт</a>
+ </div>
+</div></section>
+
+<section id="free"><div class="wrap">
+ <div class="free rv">
+  <div class="free-ic">🎁</div>
+  <div>
+   <h2 class="sec-h" style="margin-bottom:10px">Выезд на замеры и консультация — бесплатно</h2>
+   <p style="color:var(--mut);font-size:18px">Приедем, оценим объём работ, подберём материалы и назовём точную стоимость. Без обязательств.</p>
+  </div>
+  <a class="btn btn-acc" href="#contacts">Заказать замер</a>
+ </div>
+</div></section>
+
+<section id="contacts"><div class="wrap">
+ <div class="contact rv">
+  <div>
+   <h2>Нужна крыша или фасад? Рассчитаем стоимость бесплатно</h2>
+   <p>Напишите нам в WhatsApp или позвоните — ответим быстро и подскажем лучшее решение для вашего дома.</p>
+   <p style="margin-top:18px;font-size:16px">📍 г. Рудный и Костанайская область</p>
+  </div>
+  <div class="clist">
+   <a href="https://wa.me/77783351326?text=Здравствуйте!%20Интересуют%20ваши%20услуги" target="_blank" rel="noopener"><span class="ci" style="background:rgba(37,211,102,.15);color:var(--wa)"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .2-3.3-.7-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.3.5-.4.4c-.1.2-.3.3-.1.6.2.3.7 1.2 1.5 1.9 1 .9 1.9 1.2 2.2 1.3.3.1.4.1.6-.1l.8-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.1.1.6-.1 1.2z"/></svg></span><span><small>WhatsApp</small>+7 778 335 13 26</span></a>
+   <a href="tel:+77783351326"><span class="ci" style="background:rgba(255,106,43,.15);color:var(--acc)"><svg viewBox="0 0 24 24"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11 11 0 0 0 3.6.6 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.6 3.6a1 1 0 0 1-.25 1z"/></svg></span><span><small>Телефон</small>+7 778 335 13 26</span></a>
+   <a href="https://www.instagram.com/krovlya_rudny?cplk=eXU3ZmRwdXNuZnln" target="_blank" rel="noopener"><span class="ci" style="background:rgba(225,48,108,.15);color:#ff5a8f"><svg viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm5 3.5a4.500 4.500 0 1 1 0 9 4.500 4.500 0 0 1 0-9zm0 2a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zm5.2-3.200a1.1 1.1 0 1 1 0 2.200 1.1 1.1 0 0 1 0-2.200z"/></svg></span><span><small>Instagram</small>@krovlya_rudny</span></a>
+  </div>
+ </div>
+</div></section>
+</main>
+
+<footer><div class="wrap"><span>г. Рудный, Костанайская область</span></div></footer>
+
+<a class="fab" href="https://wa.me/77783351326?text=Здравствуйте!%20Интересуют%20ваши%20услуги" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .2-3.3-.7-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.3.5-.4.4c-.1.2-.3.3-.1.6.2.3.7 1.2 1.5 1.9 1 .9 1.9 1.2 2.2 1.3.3.1.4.1.6-.1l.8-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.1.1.6-.1 1.2z"/></svg></a>
+
+<script>
+document.querySelectorAll('#nav a').forEach(a=>a.onclick=()=>document.getElementById('nav').classList.remove('open'));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
