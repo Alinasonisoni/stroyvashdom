@@ -59,7 +59,7 @@ nav a:hover{color:var(--wine)}
 .svc p{color:var(--graphite);font-size:16px;max-width:560px}
 
 .about{background:var(--wine);color:#fff;padding:clamp(72px,9vw,130px) var(--pad);display:grid;grid-template-columns:1.6fr 1fr;gap:clamp(32px,5vw,80px);align-items:center}
-.stage img{width:100%;aspect-ratio:1268/675;object-fit:cover;border-radius:4px}
+.stage img{width:100%;height:auto;aspect-ratio:1268/675;object-fit:cover;border-radius:4px}
 .frame{position:relative;touch-action:pan-y}
 .arrow{position:absolute;top:50%;transform:translateY(-50%);width:52px;height:52px;border-radius:50%;border:0;background:rgba(255,255,255,.92);color:var(--ink);display:grid;place-items:center;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.3)}
 .arrow:hover{background:#fff}.arrow.prev{left:12px}.arrow.next{right:12px}
@@ -120,6 +120,13 @@ footer{margin-top:80px;padding-top:24px;border-top:1px solid #4a505b;color:#aab1
  .facts b{font-size:24px}
  .svc-grid{grid-template-columns:1fr;gap:44px}
  .svc.big{grid-column:auto}
+ .about{display:flex;flex-direction:column;align-items:stretch;gap:0;padding:48px 16px}
+ .about>div:last-child{display:contents}
+ .about h2{order:-1;font-size:32px;margin-bottom:20px}
+ .about p{margin-top:22px;font-size:16px}
+ .about ul{margin:20px 0 24px}
+ .about li{font-size:15px;padding:12px 0}
+ .arrow svg{width:22px;height:22px}
  .free .btn{width:100%}
  .tabs button{font-size:13px}
  .arrow{width:42px;height:42px}.arrow.prev{left:8px}.arrow.next{right:8px}
